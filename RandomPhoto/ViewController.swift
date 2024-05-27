@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
         view.addSubview(imageView)
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         
         button.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
         getRandomPhoto()
+        
     }
     
     let colours: [UIColor] = [.systemPink, .systemOrange, .systemYellow, .systemMint]
@@ -51,6 +53,7 @@ class ViewController: UIViewController {
     }
 
     func getRandomPhoto(){
+        
         let urlString = "https://picsum.photos/200/300"
         
         let url = URL(string: urlString)!
@@ -59,7 +62,6 @@ class ViewController: UIViewController {
         }
         
         imageView.image = UIImage(data: data)
-        
     }
     
     
